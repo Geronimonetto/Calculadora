@@ -1,0 +1,21 @@
+- Para que serve uma clausula WHERE?
+    O conceito do WHERE em banco de dados relacional funciona como um filtro para um SELECT
+    fazendo isso conseguimos acessar um determinado conteudo que queremos em alguma tabela.
+
+- Sintaxe do WHERE:
+    * - serve para pegar todas as colunas da tabela
+    SELECT * FROM nome_tabela WHERE filtro (podendo ser um codigo_id = numerodoid ou descricao = 'descricaodoproduto');
+
+    Exemplo:
+
+    SELECT numeros FROM tipo_numeros WHERE codigo = 1 - desse modo estou buscando a  - COLUNA numeros, TABELA tipo_numeros ONDE o codigo = 1;
+
+    Podemos também apelidar as TABELAS:
+
+    SELECT p.nome AS Nome FROM produtos AS p WHERE descricao = 'Computador';
+    SELECIONE da TABELA produto a COLUNA nome e apelide como Nome DA TABELA produto Apelide como p ONDE descricao for igual a computador;
+
+
+    *SELECT p.nome AS produtos, t.nome AS TipodoProduto FROM produtos AS p, tipos_produtos AS t WHERE p.id = t.id_produtos;*
+    SELECIONE da TABELA produto a COLUNA nome e Apelide como produtos na nova TABELA filtrada e também da TABELA tipo a COLUNA nome apelidar como TipodeProduto
+    da TABELA produto apelidar como p ONDE o id de produtos for igual ao RELACIONAMENTO do id da TABELA tipo com a TABELA produto;
